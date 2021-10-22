@@ -11,6 +11,16 @@
     align-items: center;
 }
 
+.hero-section .blur{
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px); 
+    height: calc(100vh - 120px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .hero-section .logo{
     height: 150px;
     display: block;
@@ -21,6 +31,7 @@
     margin-top: 10px;
     text-align: center;
     color: #fff;
+    z-index: 9999;
     text-transform: capitalize;
     font-size: 35px;
     font-weight: 300;
