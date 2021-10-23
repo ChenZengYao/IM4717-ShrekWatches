@@ -50,7 +50,7 @@ else {
           <div class="product-info">
               <h2 class="product-brand">CASIO G-SHOCK</h2>
               <p class="product-short-des">CARBON CORE GA-2100-1ADR</p>
-              <span class="price">$250</span><span class="actual-price">$400</span>
+              <span class="price">$250</span><span class="actual-price">$500</span>
           </div>
       </div>
       <div class="product-card">
@@ -62,7 +62,7 @@ else {
           <div class="product-info">
               <h2 class="product-brand">CASIO G-SHOCK</h2>
               <p class="product-short-des">CARBON CORE GA-2110SU-3ADR</p>
-              <span class="price">$250</span><span class="actual-price">$400</span>
+              <span class="price">$200</span><span class="actual-price">$400</span>
           </div>
       </div>
       <div class="product-card">
@@ -74,7 +74,7 @@ else {
           <div class="product-info">
               <h2 class="product-brand">FOSSIL</h2>
               <p class="product-short-des">ES4572</p>
-              <span class="price">$250</span><span class="actual-price">$400</span>
+              <span class="price">$300</span><span class="actual-price">$600</span>
           </div>
       </div>
       <div class="product-card">
@@ -86,7 +86,7 @@ else {
           <div class="product-info">
               <h2 class="product-brand">FOSSIL</h2>
               <p class="product-short-des">ES3545</p>
-              <span class="price">$250</span><span class="actual-price">$400</span>
+              <span class="price">$300</span><span class="actual-price">$600</span>
           </div>
       </div>
       <div class="product-card">
@@ -98,7 +98,7 @@ else {
           <div class="product-info">
               <h2 class="product-brand">SEIKO</h2>
               <p class="product-short-des">SRPD53K1</p>
-              <span class="price">$250</span><span class="actual-price">$400</span>
+              <span class="price">$200</span><span class="actual-price">$400</span>
           </div>
       </div>
       <div class="product-card">
@@ -110,7 +110,7 @@ else {
           <div class="product-info">
               <h2 class="product-brand">SEIKO</h2>
               <p class="product-short-des">SRPD65K1</p>
-              <span class="price">$250</span><span class="actual-price">$400</span>
+              <span class="price">$250</span><span class="actual-price">$500</span>
           </div>
       </div>
       <div class="product-card">
@@ -122,7 +122,7 @@ else {
           <div class="product-info">
               <h2 class="product-brand">TISSOT</h2>
               <p class="product-short-des">SEASTAR 1000 CHRONOGRAPH T1204173705100</p>
-              <span class="price">$250</span><span class="actual-price">$400</span>
+              <span class="price">$400</span><span class="actual-price">$800</span>
           </div>
       </div>
       <div class="product-card">
@@ -134,7 +134,7 @@ else {
           <div class="product-info">
               <h2 class="product-brand">TISSOT</h2>
               <p class="product-short-des">TRADITION CHRONOGRAPH T0636173603700</p>
-              <span class="price">$250</span><span class="actual-price">$400</span>
+              <span class="price">$450</span><span class="actual-price">$900</span>
           </div>
       </div>
     </div>
@@ -171,7 +171,7 @@ else {
           <div class="product-info">
               <h2 class="product-brand">TISSOT</h2>
               <p class="product-short-des">SEASTAR 2000 PROFESSIONAL POWERMATIC 80 T1206071104100</p>
-              <span class="price">$250</span>
+              <span class="price">$450</span>
           </div>
       </div>
       <div class="product-card">
@@ -195,7 +195,7 @@ else {
           <div class="product-info">
               <h2 class="product-brand">CASIO G-SHOCK</h2>
               <p class="product-short-des">CARBON CORE "CASIOAK" GA-2100-4ADR</p>
-              <span class="price">$250</span>
+              <span class="price">$150</span>
           </div>
       </div>
       <div class="product-card">
@@ -207,7 +207,7 @@ else {
           <div class="product-info">
               <h2 class="product-brand">TISSOT</h2>
               <p class="product-short-des">SEASTAR 2000 PROFESSIONAL POWERMATIC 80 T1206071104101</p>
-              <span class="price">$250</span>
+              <span class="price">$800</span>
           </div>
       </div>
       <div class="product-card">
@@ -219,7 +219,7 @@ else {
           <div class="product-info">
               <h2 class="product-brand">FOSSIL</h2>
               <p class="product-short-des">CH2600IE</p>
-              <span class="price">$250</span>
+              <span class="price">$200</span>
           </div>
       </div>
       <div class="product-card">
@@ -231,7 +231,7 @@ else {
           <div class="product-info">
               <h2 class="product-brand">SEIKO</h2>
               <p class="product-short-des">LIMITED EDITION 6,500PCS GAARA "NARUTO SERIES" SRPF71K1</p>
-              <span class="price">$250</span>
+              <span class="price">$350</span>
           </div>
       </div>
       <div class="product-card">
@@ -243,7 +243,7 @@ else {
           <div class="product-info">
               <h2 class="product-brand">CASIO G-SHOCK</h2>
               <p class="product-short-des">CARBON CORE "CASIOAK" GA-2100SU-1ADR</p>
-              <span class="price">$250</span>
+              <span class="price">$150</span>
           </div>
       </div>
       <div class="product-card">
@@ -255,7 +255,7 @@ else {
           <div class="product-info">
               <h2 class="product-brand">SEIKO</h2>
               <p class="product-short-des">LIMITED EDITION 6,500PCS LEE "NARUTO SERIES" SRPF73K1</p>
-              <span class="price">$250</span>
+              <span class="price">$300</span>
           </div>
       </div>
     </div>
