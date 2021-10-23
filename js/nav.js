@@ -18,9 +18,7 @@ const createNav = () => {
         </div>
         <ul class="links-container">
             <li class="link-item"><a href="index.php" class="link">home</a></li>
-            <li class="link-item"><a href="products_women.html" class="link">women</a></li>
-            <li class="link-item"><a href="products_men.html" class="link">men</a></li>
-            <li class="link-item"><a href="#" class="link">accessories</a></li>
+            <li class="link-item"><a href="collections.php" class="link">collections</a></li>
         </ul>
     `;
 }

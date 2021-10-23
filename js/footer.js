@@ -6,7 +6,7 @@ const createFooter = () => {
         <img src="assets/shreklogo_light.png" class="logo" alt="">
         <div class="footer-ul-container">
             <ul class="category">
-                <li class="category-title"><a href="collections.php">our collections</a></li>
+                <li class="category-title"><a href="collections.php" class="social-link">our collections</a></li>
             </ul>
         </div>
     </div>
