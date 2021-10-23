@@ -42,8 +42,10 @@ function validateEmail(){
 
 function validateTel(){
   var tel = document.getElementById("tel") .value;
-  var telRegex = /^[0-9]{1,8}$/;
-  if (!telRegex.test(tel)) {
+  var telRegex = /^[0-9]{8}$/;
+  if (telRegex.test(tel)) {
+    return true;
+  } else {
     alert('Please enter a valid tel number (8digits)');
     document.getElementById("tel").value = "";
     return false;
