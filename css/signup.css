@@ -1,5 +1,3 @@
-@import 'home.css';
-
 *{
     margin: 0;
     padding: 0;
@@ -8,7 +6,8 @@
 
 .form{
     width: 100%;
-    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,19 +15,10 @@
     font-family: 'roboto', sans-serif;
 }
 
-.loader{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100px;
-    display: none;
-}
-
 .formlogo{
     height: 80px;
     display: block;
-    margin: 0 auto 50px;
+    margin: 0 auto 20px;
 }
 
 input[type="text"],

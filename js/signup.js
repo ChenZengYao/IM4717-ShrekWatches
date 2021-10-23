@@ -9,7 +9,7 @@ The last extension must have two to three characters.
 
 //Form script
 function validateForm(event){
-  if(validateName() == false){
+  if(validateUsername() == false){
     event.preventDefault();
   }else if(validateEmail() == false){
     event.preventDefault();
@@ -18,12 +18,12 @@ function validateForm(event){
   }
 }
 
-function validateName(){
-  var name = document.getElementById("name") .value;
-  var nameRegex = /^([A-za-z\s]+)$/;
-  if (!nameRegex.test(name)) {
-    alert('Please enter a valid name');
-    document.getElementById("name").value = "";
+function validateUsername(){
+  var username = document.getElementById("username") .value;
+  var usernameRegex = /^([\w]+)$/;
+  if (!usernameRegex.test(username)) {
+    alert('Please enter a valid username');
+    document.getElementById("username").value = "";
     return false;
   }
 }

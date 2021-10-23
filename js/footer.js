@@ -6,18 +6,7 @@ const createFooter = () => {
         <img src="assets/shreklogo_light.png" class="logo" alt="">
         <div class="footer-ul-container">
             <ul class="category">
-                <li class="category-title">men</li>
-                <li><a href="#" class="footer-link">casio</a></li>
-                <li><a href="#" class="footer-link">fossil</a></li>
-                <li><a href="#" class="footer-link">seiko</a></li>
-                <li><a href="#" class="footer-link">tissot</a></li>
-            </ul>
-            <ul class="category">
-                <li class="category-title">women</li>
-                <li><a href="#" class="footer-link">casio</a></li>
-                <li><a href="#" class="footer-link">fossil</a></li>
-                <li><a href="#" class="footer-link">seiko</a></li>
-                <li><a href="#" class="footer-link">tissot</a></li>
+                <li class="category-title"><a href="collections.php">our collections</a></li>
             </ul>
         </div>
     </div>

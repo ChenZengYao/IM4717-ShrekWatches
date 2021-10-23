@@ -1,6 +1,15 @@
 @import 'nav.css';
 @import 'footer.css';
 
+a{
+  text-decoration: none;
+  color: black;
+}
+
+a:visited{
+  color:black;
+}
+
 .hero-section{
     width: 100%;
     height: calc(100vh - 120px);
@@ -13,7 +22,7 @@
 
 .hero-section .blur{
     background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(4px); 
+    backdrop-filter: blur(4px);
     height: calc(100vh - 120px);
     width: 100%;
     display: flex;

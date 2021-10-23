@@ -1,5 +1,5 @@
-const createNav = () => {
-    let nav = document.querySelector('.navbar');
+const createNavlogin = () => {
+    let nav = document.querySelector('.navbar-login');
 
     nav.innerHTML = `
         <div class="nav">
@@ -8,11 +8,10 @@ const createNav = () => {
                 <div class="dropdown">
                   <img class="dropbtn" src="assets/user.png">
                   <div class="dropdown-content">
-                    <a href="signup.html">Sign Up</a>
-                    <a href="authmain.php">Login</a>
+                    <a href="#">Order Status</a>
+                    <a href="logout.php">Logout</a>
                   </div>
                 </div>
-                <!-- <img src="assets/user.png" alt=""> -->
                 <a href="shoppingcart.php"><img src="assets/cart.png" alt=""></a>
             </div>
         </div>
@@ -25,4 +24,4 @@ const createNav = () => {
     `;
 }
 
-createNav();
+createNavlogin();
