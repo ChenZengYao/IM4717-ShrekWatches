@@ -5,7 +5,10 @@ a{
     text-decoration: none;
 }
 
-
+.button{
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .hero-section{
     width: 100%;
