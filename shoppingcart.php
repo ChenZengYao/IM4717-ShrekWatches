@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/shoppingcart.css">
+
 <?php
 include "dbconnect.php";
 session_start();
@@ -53,13 +55,13 @@ $query4 = 'select * from shoppingcart '
 $result = $dbcnx->query($query4);
 
 ?>
- <table border = "1" style = 'margin-left: auto; margin-right: auto;'>
-   <thead>
+<table border = "1" class='center-items'>
+  <thead>
     <tr>
       <th>Brand</th>
       <th>Product Name</th>
       <th>Price</th>
-     </tr>
+    </tr>
 <?php
 
 if ($result->num_rows > 0) {
@@ -97,11 +99,14 @@ if (isset($_GET['click'])) {
   echo '<script> window.location.href = "shoppingcart.php" </script>';
 }
 
-echo "<button class='button'><a href='shoppingcart.php?click=true'>Clear Cart</a></button>
-    <button class='button'><a href='payment.php'>Proceed to Payment</a></button>";
+echo "<div class='btn-container'>
+        <div class='btn-center'>
+          <button type='button' class='button btn-clear'><a href='shoppingcart.php?click=true' class='btn-link'>Clear Cart</a></button>
+          <button type='button' class='button btn-pay'><a href='payment.php' class='btn-link'>Proceed to Payment</a></button>
+        </div>
+      </div>";
 
 $dbcnx->close();
 ?>
-
 <footer></footer>
 <script src="js/footer.js"></script>
