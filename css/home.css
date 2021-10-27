@@ -190,7 +190,7 @@ a{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
+    grid-auto-rows: auto;
 }
 
 .collection{
@@ -214,7 +214,7 @@ a{
     text-transform: capitalize;
 }
 
-.collection:nth-child(2){
+.collection:nth-child(3){
     grid-column: span 2;
     margin-bottom: 10px;
 }
