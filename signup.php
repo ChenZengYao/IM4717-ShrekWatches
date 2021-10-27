@@ -1,4 +1,4 @@
-<?php // register.php
+<?php // function for signup.html
 include "dbconnect.php";
 
     echo "<script>";

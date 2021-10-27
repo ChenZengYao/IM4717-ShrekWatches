@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="css/home.css">
 <link rel="stylesheet" href="css/shoppingcart.css">
+<link rel="stylesheet" href="css/signup.css">
 
 <?php
 include "dbconnect.php";
@@ -55,6 +56,11 @@ $query4 = 'select * from shoppingcart '
 $result = $dbcnx->query($query4);
 
 ?>
+<div class="logocontainer">
+  <img src="assets/shreklogo.png" class="formlogo">
+</div>
+<div class="shoppingbg">
+<h2 style="padding-top:10px;">Shopping Cart</h2>
 <table border = "1" class='center-items'>
   <thead>
     <tr>
@@ -62,6 +68,7 @@ $result = $dbcnx->query($query4);
       <th>Product Name</th>
       <th>Price</th>
     </tr>
+  </thead>
 <?php
 
 if ($result->num_rows > 0) {
@@ -92,6 +99,7 @@ echo "<tr>
       </tr>
       </table>";
 
+//function to clear cart
 if (isset($_GET['click'])) {
   $query6 = 'DELETE FROM shoppingcart' . " WHERE customer_id = '$customerid'";
   $result = $dbcnx->query($query6);
@@ -104,6 +112,7 @@ echo "<div class='btn-container'>
           <button type='button' class='button btn-clear'><a href='shoppingcart.php?click=true' class='btn-link'>Clear Cart</a></button>
           <button type='button' class='button btn-pay'><a href='payment.php' class='btn-link'>Proceed to Payment</a></button>
         </div>
+      </div>
       </div>";
 
 $dbcnx->close();

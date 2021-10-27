@@ -27,12 +27,12 @@ else {
 
   <!-- hero section -->
   <header class="hero-section">
-    <!-- <div class="blur"> -->
+    <div class="blur">
         <div>
             <img src="assets/shreklogo_light.png" class="logo" alt="">
             <p class="sub-heading">Shop Watches Online</p>
         </div>
-    <!-- </div> -->
+    </div>
   </header>
 
   <!-- Beset Selling cards container -->

@@ -76,18 +76,6 @@ if (isset($_POST['userid']) && isset($_POST['password']))
       </div>
     </div>';
   }
-  //   // provide form to log in
-  //   echo '<form method="post" action="authmain.php">';
-  //   echo '<table>';
-  //   echo '<tr><td>Userid:</td>';
-  //   echo '<td><input type="text" name="userid"></td></tr>';
-  //   echo '<tr><td>Password:</td>';
-  //   echo '<td><input type="password" name="password"></td></tr>';
-  //   echo '<tr><td colspan="2" align="center">';
-  //   echo '<input type="submit" value="Log in"></td></tr>';
-  //   echo '</table></form>';
-  // }
-//}
 ?>
 <footer></footer>
 <script src="js/footer.js"></script>

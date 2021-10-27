@@ -12,7 +12,6 @@ const createNav = () => {
                     <a href="authmain.php">Login</a>
                   </div>
                 </div>
-                <!-- <img src="assets/user.png" alt=""> -->
                 <a href="shoppingcart.php"><img src="assets/cart.png" alt=""></a>
             </div>
         </div>
