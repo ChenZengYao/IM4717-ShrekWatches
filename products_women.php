@@ -27,15 +27,14 @@ else {
 <body>
 
   <!-- hero section -->
-    <header class="hero-section">
+    <header class="hero-section-women">
         <!-- <div class="blur"> -->
             <div>
                 <img src="assets/shreklogo_light.png" class="logo" alt="">
-                <p class="sub-heading">Shop Watches Online</p>
+                <p class="sub-heading">Women's Collections</p>
             </div>
         <!-- </div> -->
     </header>
-    <h1>Women's Collections</h1>
   <!-- Beset Selling cards container -->
     <section class="product">
         <div class="wrapper">

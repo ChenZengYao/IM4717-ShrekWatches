@@ -16,3 +16,75 @@ h1{
     grid-column: span 4;
     margin-bottom: 10px;
 }
+
+.hero-section-men{
+  width: 100%;
+  height: calc(100vh - 120px);
+  background-image: url('../assets/collection_men_banner.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section-men .blur{
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  height: calc(100vh - 120px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section-men .logo{
+  height: 150px;
+  display: block;
+  margin: auto;
+}
+
+.hero-section-men .sub-heading{
+  margin-top: 10px;
+  text-align: center;
+  color: #fff;
+  z-index: 9999;
+  text-transform: capitalize;
+  font-size: 35px;
+  font-weight: 300;
+}
+
+.hero-section-women{
+  width: 100%;
+  height: calc(100vh - 120px);
+  background-image: url('../assets/collection_women_banner.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section-women .blur{
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  height: calc(100vh - 120px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section-women .logo{
+  height: 150px;
+  display: block;
+  margin: auto;
+}
+
+.hero-section-women .sub-heading{
+  margin-top: 10px;
+  text-align: center;
+  color: #fff;
+  z-index: 9999;
+  text-transform: capitalize;
+  font-size: 35px;
+  font-weight: 300;
+}

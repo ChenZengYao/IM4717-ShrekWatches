@@ -141,22 +141,12 @@ else {
   </section>
 
   <!-- collections -->
-    <!-- <section class="collection-container">
-        <a href="products_women.php" class="collection">
-          <img src="assets/collection_women.jpg" alt="">
-          <p class="collection-title">women<br>watches</p>
-        </a>
-        <a href="products_men.php" class="collection">
-          <img src="assets/collection_men.jpg" alt="">
-          <p class="collection-title">men<br>watches</p>
-        </a>
-    </section> -->
     <section class="collection-container">
-      <a href="#" class="collection">
+      <a href="products_women.php" class="collection">
           <img src="assets/collection_women.jpg" alt="">
           <p class="collection-title">women <br> watches</p>
       </a>
-      <a href="#" class="collection">
+      <a href="products_men.php" class="collection">
           <img src="assets/collection_men.jpg" alt="">
           <p class="collection-title">men <br> watches</p>
       </a>
