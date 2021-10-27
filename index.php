@@ -141,12 +141,26 @@ else {
   </section>
 
   <!-- collections -->
-    <section class="collection-container">
-        <a href="#" class="collection">
-            <img src="assets/accessories.png" alt="">
-            <p class="collection-title">collections</p>
+    <!-- <section class="collection-container">
+        <a href="products_women.php" class="collection">
+          <img src="assets/collection_women.jpg" alt="">
+          <p class="collection-title">women<br>watches</p>
         </a>
-    </section>
+        <a href="products_men.php" class="collection">
+          <img src="assets/collection_men.jpg" alt="">
+          <p class="collection-title">men<br>watches</p>
+        </a>
+    </section> -->
+    <section class="collection-container">
+      <a href="#" class="collection">
+          <img src="assets/collection_women.jpg" alt="">
+          <p class="collection-title">women <br> watches</p>
+      </a>
+      <a href="#" class="collection">
+          <img src="assets/collection_men.jpg" alt="">
+          <p class="collection-title">men <br> watches</p>
+      </a>
+  </section>
 
   <!-- Limited Edition cards container -->
   <section class="product">

@@ -8,7 +8,6 @@ const createNavlogin = () => {
                 <div class="dropdown">
                   <img class="dropbtn" src="assets/user.png">
                   <div class="dropdown-content">
-                    <a href="#">Order Status</a>
                     <a href="logout.php">Logout</a>
                   </div>
                 </div>
@@ -17,7 +16,8 @@ const createNavlogin = () => {
         </div>
         <ul class="links-container">
             <li class="link-item"><a href="index.php" class="link">home</a></li>
-            <li class="link-item"><a href="collections.php" class="link">collections</a></li>
+            <li class="link-item"><a href="products_men.php" class="link">Men</a></li>
+            <li class="link-item"><a href="products_women.php" class="link">Women</a></li>
         </ul>
     `;
 }

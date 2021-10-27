@@ -188,8 +188,9 @@ a{
 .collection-container{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
 }
 
 .collection{
@@ -213,7 +214,7 @@ a{
     text-transform: capitalize;
 }
 
-.collection:nth-child(1){
-    grid-column: span 1;
+.collection:nth-child(2){
+    grid-column: span 2;
     margin-bottom: 10px;
 }
