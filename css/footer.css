@@ -1,19 +1,36 @@
 footer{
     position: relative;
     width: 100%;
-    padding: 40px 10vw;
-    padding-bottom: 80px;
+    padding: 10px 10vw;
+    padding-bottom: 60px;
     background: #383838;
 }
 
 .footer-content{
-    display: flex;
+    display: grid;
     width: 100%;
-    justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: auto;
 }
 
+.footer-logo-center{
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.footer-text-center{
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
 .footer-content .logo{
-    height: 160px;
+    height: 180px;
 }
 
 .footer-link:hover{
@@ -26,6 +43,8 @@ footer{
 }
 
 .footer-title{
+    font-weight: bold;
+    font-size: 24px;
     margin-top: 30px;
     color: #fff;
 }

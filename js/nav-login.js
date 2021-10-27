@@ -8,10 +8,7 @@ const createNavlogin = () => {
                 <div class="dropdown">
                   <img class="dropbtn" src="assets/user.png">
                   <div class="dropdown-content">
-<<<<<<< Updated upstream
-=======
                     <a href="order_history.php">Order History</a>
->>>>>>> Stashed changes
                     <a href="logout.php">Logout</a>
                   </div>
                 </div>

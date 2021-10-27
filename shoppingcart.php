@@ -95,7 +95,7 @@ $_SESSION['totalsum'] = $totalsum;
 
 echo "<tr>
         <th align='right' colspan='2'>Total: </th>
-        <td align='right'>$ {$totalsum}</td>
+        <td align='right'><strong>$ {$totalsum}</strong></td>
       </tr>
       </table>";
 
