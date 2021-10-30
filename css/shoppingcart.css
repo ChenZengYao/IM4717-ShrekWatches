@@ -42,15 +42,15 @@ thead, tbody, tfoot, th, tr, td{
 .btn-center{
     margin: 0;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
 .btn-pay {
     background: #383838;
     color: #fff;
+    margin-left: 25px;
 }
 
 .btn-pay:hover {
@@ -62,6 +62,7 @@ thead, tbody, tfoot, th, tr, td{
     background-color: white;
     color: black;
     border: 1px solid #383838;
+    margin-right: 25px;
 }
 
 .btn-clear:hover {

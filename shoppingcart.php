@@ -70,13 +70,13 @@ $result = $dbcnx->query($query4);
       <th>Price</th>
     </tr>
   </thead> -->
-  <div class="table-container">
-  <ul>
-    <li class="table-header">
-      <div class="col col-1">Brand</div>
-      <div class="col col-2">Product Name</div>
-      <div class="col col-3">Price</div>
-    </li>
+  <div class="container-table">
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-1">Brand</div>
+        <div class="col col-2">Product Name</div>
+        <div class="col col-3">Price</div>
+      </li>
 <?php
 
 if ($result->num_rows > 0) {
@@ -87,13 +87,11 @@ if ($result->num_rows > 0) {
     //         <td> {$row["product_name"]} </td>
     //         <td>$ {$row["price"]} </td>
     //       </tr>";
-    echo"<li class='table-row'>
-      <div class='col col-1' data-label='Brand'> {$row["product_brand"]} </div>
-      <div class='col col-2' data-label='Product Name'> {$row["product_name"]} </div>
-      <div class='col col-3' data-label='Price'>$ {$row["price"]} </div>
-    </li>
-    </ul>
-    </div>";
+    echo" <li class='table-row'>
+            <div class='col col-1'> {$row["product_brand"]} </div>
+            <div class='col col-2'> {$row["product_name"]} </div>
+            <div class='col col-3'>$ {$row["price"]} </div>
+          </li>";
   }
 }
 
@@ -113,6 +111,13 @@ $_SESSION['totalsum'] = $totalsum;
 //         <td align='right'><strong>$ {$totalsum}</strong></td>
 //       </tr>
 //       </table>";
+echo "<li class='table-row' style='background-color: #95A5A6;'>
+        <div class='col col-1'><strong>Total:</strong></div>
+        <div class='col col-2'></div>
+        <div class='col col-3'><strong>$ {$totalsum}</strong> </div>
+      </li>
+    </ul>
+  </div>";
 
 //function to clear cart
 if (isset($_GET['click'])) {
