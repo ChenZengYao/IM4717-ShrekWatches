@@ -26,14 +26,7 @@ else {
 <body>
 
   <!-- hero section -->
-  <header class="hero-section">
-    <div class="blur">
-        <div>
-            <img src="assets/shreklogo_light.png" class="logo" alt="">
-            <p class="sub-heading">Shop Watches Online</p>
-        </div>
-    </div>
-  </header>
+  <header class="hero-section"></header>
 
   <!-- Beset Selling cards container -->
   <section class="product">

@@ -8,18 +8,8 @@ a{
 .hero-section{
     width: 100%;
     height: calc(100vh - 120px);
-    background-image: url('../assets/header.png');
+    background-image: url('../assets/banner.jpg');
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-section .blur{
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(1.5px);
-    height: calc(100vh - 120px);
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

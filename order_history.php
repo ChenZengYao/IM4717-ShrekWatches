@@ -51,7 +51,7 @@ if ($result->num_rows > 0) {
         </li>";
   }
 }
-echo '</ul></div>';
+echo '</ul></div></div>';
 $dbcnx->close();
 ?>
 
