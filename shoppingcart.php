@@ -62,35 +62,23 @@ $result = $dbcnx->query($query4);
 </div>
 <div class="shoppingbg">
 <h2 style="padding-top:10px;">Shopping Cart</h2>
-<!-- <table border = "1" class='center-items'>
-  <thead>
-    <tr>
-      <th>Brand</th>
-      <th>Product Name</th>
-      <th>Price</th>
-    </tr>
-  </thead> -->
+<!-- table header -->
   <div class="container-table">
     <ul class="responsive-table">
       <li class="table-header">
-        <div class="col col-1">Brand</div>
-        <div class="col col-2">Product Name</div>
-        <div class="col col-3">Price</div>
+        <div class="col col-2">Brand</div>
+        <div class="col col-3">Product Name</div>
+        <div class="col col-4">Price</div>
       </li>
 <?php
 
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    // echo "<tr>
-    //         <td> {$row["product_brand"]} </td>
-    //         <td> {$row["product_name"]} </td>
-    //         <td>$ {$row["price"]} </td>
-    //       </tr>";
     echo" <li class='table-row'>
-            <div class='col col-1'> {$row["product_brand"]} </div>
-            <div class='col col-2'> {$row["product_name"]} </div>
-            <div class='col col-3'>$ {$row["price"]} </div>
+            <div class='col col-2'> {$row["product_brand"]} </div>
+            <div class='col col-3'> {$row["product_name"]} </div>
+            <div class='col col-4'>$ {$row["price"]} </div>
           </li>";
   }
 }
@@ -105,16 +93,11 @@ if ($result->num_rows > 0) {
   }
 }
 $_SESSION['totalsum'] = $totalsum;
-
-// echo "<tr>
-//         <th align='right' colspan='2'>Total: </th>
-//         <td align='right'><strong>$ {$totalsum}</strong></td>
-//       </tr>
-//       </table>";
+//display total sum
 echo "<li class='table-row' style='background-color: #95A5A6;'>
-        <div class='col col-1'><strong>Total:</strong></div>
-        <div class='col col-2'></div>
-        <div class='col col-3'><strong>$ {$totalsum}</strong> </div>
+        <div class='col col-2'><strong>Total:</strong></div>
+        <div class='col col-3'></div>
+        <div class='col col-4'><strong>$ {$totalsum}</strong> </div>
       </li>
     </ul>
   </div>";

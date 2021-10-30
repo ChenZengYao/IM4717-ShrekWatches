@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="css/home.css">
 <link rel="stylesheet" href="css/shoppingcart.css">
 <link rel="stylesheet" href="css/signup.css">
+<link rel="stylesheet" href="css/table.css">
 
 <?php
 include "dbconnect.php";
@@ -27,30 +28,30 @@ $result = $dbcnx->query($query);
   <img src="assets/shreklogo.png" class="formlogo">
 </div>
 <div class="shoppingbg" style="padding-bottom:50px;">
-    <h2 style="padding-top:10px;">Order History</h2>
-  <table border = "1" class='center-items'>
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Brand</th>
-        <th>Product Name</th>
-        <th>Price</th>
-      </tr>
-    </thead>
+  <h2 style="padding-top:10px;">Order History</h2>
+  <!-- table header -->
+  <div class="container-table">
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-1">Date</div>
+        <div class="col col-2">Brand</div>
+        <div class="col col-3">Product Name</div>
+        <div class="col col-4">Price</div>
+      </li>
 <?php
 
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo "<tr>
-            <td> {$row["date"]} </td>
-            <td> {$row["product_brand"]} </td>
-            <td> {$row["product_name"]} </td>
-            <td>$ {$row["price"]} </td>
-          </tr>";
+    echo"<li class='table-row'>
+          <div class='col col-1'> {$row["date"]} </div>
+          <div class='col col-2'> {$row["product_brand"]} </div>
+          <div class='col col-3'> {$row["product_name"]} </div>
+          <div class='col col-4'>$ {$row["price"]} </div>
+        </li>";
   }
 }
-echo '</table></div>';
+echo '</ul></div>';
 $dbcnx->close();
 ?>
 

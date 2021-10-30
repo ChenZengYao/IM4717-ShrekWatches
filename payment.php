@@ -65,41 +65,27 @@ $result = $dbcnx->query($query4);
   <img src="assets/shreklogo.png" class="formlogo">
 </div>
 <div class="form">
-  <div class="container" style="margin-right:100px;">
+  <div class="container" style="margin-right:150px;">
     <h2>Shopping Cart</h2>
-  <!-- <table border = "1">
-    <thead>
-      <tr>
-        <th>Brand</th>
-        <th>Product Name</th>
-        <th>Price</th>
-      </tr>
-    </thead> -->
-    <div class="table-container">
-    <ul>
-      <li class="table-header">
-        <div class="col col-1">Brand</div>
-        <div class="col col-2">Product Name</div>
-        <div class="col col-3">Price</div>
-      </li>
+    <!-- table header -->
+    <div class="container-table">
+      <ul class="responsive-table">
+        <li class="table-header">
+          <div class="col col-2">Brand</div>
+          <div class="col col-3">Product Name</div>
+          <div class="col col-4">Price</div>
+        </li>
 <?php
 $array = array();
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
     array_push($array, $row["product_id"]);
-    // echo "<tr>
-    //         <td> {$row["product_brand"]} </td>
-    //         <td> {$row["product_name"]} </td>
-    //         <td>$ {$row["price"]} </td>
-    //       </tr>";
     echo"<li class='table-row'>
-            <div class='col col-1' data-label='Brand'> {$row["product_brand"]} </div>
-            <div class='col col-2' data-label='Product Name'> {$row["product_name"]} </div>
-            <div class='col col-3' data-label='Price'>$ {$row["price"]} </div>
-          </li>
-        </ul>
-      </div>";
+            <div class='col col-2' data-label='Brand'> {$row["product_brand"]} </div>
+            <div class='col col-3' data-label='Product Name'> {$row["product_name"]} </div>
+            <div class='col col-4' data-label='Price'>$ {$row["price"]} </div>
+          </li>";
   }
 }
 
@@ -116,16 +102,19 @@ if ($result->num_rows > 0) {
 }
 $_SESSION['totalsum'] = $totalsum;
 
-// echo "<tr>
-//         <th align='right' colspan='2'>Total: </th>
-//         <td align='right'>$ {$totalsum}</td>
-//       </tr>
-//       </table>
-//       </div>";
+//print total sum
+  echo "<li class='table-row' style='background-color: #95A5A6;'>
+          <div class='col col-2'><strong>Total:</strong></div>
+          <div class='col col-3'></div>
+          <div class='col col-4'><strong>$ {$totalsum}</strong> </div>
+        </li>
+      </ul>
+    </div>
+  </div>";
 
 ?>
 
-    <div class="container">
+  <div class="container" style="margin-right:150px;">
     <h2>Shipping Details</h2>
 
     <form action="update_shipping.php" method="post">
@@ -148,27 +137,12 @@ $_SESSION['totalsum'] = $totalsum;
       <input type="checkbox" class="checkbox" id="notification">
         <label for="notification">receive upcoming offers and events emails</label>
       <button class="submit-btn" input type="submit" name="submit" onclick="validateForm(event)">Make Payment</button>
-    </div>
+      
+    </form>
   </div>
 </div>
 
 <?php
-
-// echo '<div class="form">
-//     <div class="container">
-//       <img src="assets/shreklogo.png" class="formlogo" alt="">
-//       <p2>Shipping Information</p2>
-//
-//       <form action="" method="post">
-//         <input type="text" name="name" placeholder="Name" style="margin-left: auto; margin-right: auto;">
-//         <input type="email" name="email" placeholder="Email" style="margin-left: auto; margin-right: auto;">
-//         <input type="text" name="contact" placeholder="Contact Number" style="margin-left: auto; margin-right: auto;">
-//         <input type="text" name="address" placeholder="Shipping Address" style="margin-left: auto; margin-right: auto;">
-//
-//         <button class="submit-btn" input type="submit" name="submit" style="margin-left: auto; margin-right: auto;">Make Payment</button>
-//     </div>
-//   </div>';
-
 $dbcnx->close();
 ?>
 
