@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="css/home.css">
 <link rel="stylesheet" href="css/shoppingcart.css">
 <link rel="stylesheet" href="css/signup.css">
+<link rel="stylesheet" href="css/table.css">
 
 <?php
 include "dbconnect.php";
@@ -66,25 +67,39 @@ $result = $dbcnx->query($query4);
 <div class="form">
   <div class="container" style="margin-right:100px;">
     <h2>Shopping Cart</h2>
-  <table border = "1">
+  <!-- <table border = "1">
     <thead>
       <tr>
         <th>Brand</th>
         <th>Product Name</th>
         <th>Price</th>
       </tr>
-    </thead>
+    </thead> -->
+    <div class="table-container">
+    <ul>
+      <li class="table-header">
+        <div class="col col-1">Brand</div>
+        <div class="col col-2">Product Name</div>
+        <div class="col col-3">Price</div>
+      </li>
 <?php
 $array = array();
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
     array_push($array, $row["product_id"]);
-    echo "<tr>
-            <td> {$row["product_brand"]} </td>
-            <td> {$row["product_name"]} </td>
-            <td>$ {$row["price"]} </td>
-          </tr>";
+    // echo "<tr>
+    //         <td> {$row["product_brand"]} </td>
+    //         <td> {$row["product_name"]} </td>
+    //         <td>$ {$row["price"]} </td>
+    //       </tr>";
+    echo"<li class='table-row'>
+            <div class='col col-1' data-label='Brand'> {$row["product_brand"]} </div>
+            <div class='col col-2' data-label='Product Name'> {$row["product_name"]} </div>
+            <div class='col col-3' data-label='Price'>$ {$row["price"]} </div>
+          </li>
+        </ul>
+      </div>";
   }
 }
 
@@ -101,12 +116,12 @@ if ($result->num_rows > 0) {
 }
 $_SESSION['totalsum'] = $totalsum;
 
-echo "<tr>
-        <th align='right' colspan='2'>Total: </th>
-        <td align='right'>$ {$totalsum}</td>
-      </tr>
-      </table>
-      </div>";
+// echo "<tr>
+//         <th align='right' colspan='2'>Total: </th>
+//         <td align='right'>$ {$totalsum}</td>
+//       </tr>
+//       </table>
+//       </div>";
 
 ?>
 

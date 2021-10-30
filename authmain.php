@@ -54,7 +54,7 @@ if (isset($_POST['userid']) && isset($_POST['password']))
     if (isset($userid))
     {
       // if they've tried and failed to log in
-      echo 'Could not log you in.<br />';
+      echo "<script>alert('Invalid login credentials, Please try again!');</script>";
     }
     else
     {
@@ -64,7 +64,7 @@ if (isset($_POST['userid']) && isset($_POST['password']))
   echo '<div class="form">
       <div class="container">
         <img src="assets/shreklogo.png" class="formlogo" alt="">
-        <p2>Login here</p2>
+        <h2 style="padding-top:10px;">Login</h2>
 
         <form action="authmain.php" method="post">
           <input type="text" name="userid" placeholder="username" style="margin-left: auto; margin-right: auto;">

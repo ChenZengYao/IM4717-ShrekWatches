@@ -1,6 +1,6 @@
 table{
  border: 2px solid #383838;
- border-collapse: collapse;   
+ border-collapse: collapse;
 }
 
 thead, tbody, tfoot, th, tr, td{
@@ -8,6 +8,7 @@ thead, tbody, tfoot, th, tr, td{
 }
 
 .shoppingbg{
+    height: auto;
     width: 100%;
     background: #f5f5f5;
 }
@@ -48,8 +49,8 @@ thead, tbody, tfoot, th, tr, td{
 }
 
 .btn-pay {
-    background: #383838; 
-    color: #fff; 
+    background: #383838;
+    color: #fff;
 }
 
 .btn-pay:hover {
@@ -58,8 +59,8 @@ thead, tbody, tfoot, th, tr, td{
 }
 
 .btn-clear {
-    background-color: white; 
-    color: black; 
+    background-color: white;
+    color: black;
     border: 1px solid #383838;
 }
 

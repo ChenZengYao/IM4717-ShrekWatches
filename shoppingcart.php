@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="css/home.css">
 <link rel="stylesheet" href="css/shoppingcart.css">
 <link rel="stylesheet" href="css/signup.css">
+<link rel="stylesheet" href="css/table.css">
 
 <?php
 include "dbconnect.php";
@@ -61,24 +62,38 @@ $result = $dbcnx->query($query4);
 </div>
 <div class="shoppingbg">
 <h2 style="padding-top:10px;">Shopping Cart</h2>
-<table border = "1" class='center-items'>
+<!-- <table border = "1" class='center-items'>
   <thead>
     <tr>
       <th>Brand</th>
       <th>Product Name</th>
       <th>Price</th>
     </tr>
-  </thead>
+  </thead> -->
+  <div class="table-container">
+  <ul>
+    <li class="table-header">
+      <div class="col col-1">Brand</div>
+      <div class="col col-2">Product Name</div>
+      <div class="col col-3">Price</div>
+    </li>
 <?php
 
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo "<tr>
-            <td> {$row["product_brand"]} </td>
-            <td> {$row["product_name"]} </td>
-            <td>$ {$row["price"]} </td>
-          </tr>";
+    // echo "<tr>
+    //         <td> {$row["product_brand"]} </td>
+    //         <td> {$row["product_name"]} </td>
+    //         <td>$ {$row["price"]} </td>
+    //       </tr>";
+    echo"<li class='table-row'>
+      <div class='col col-1' data-label='Brand'> {$row["product_brand"]} </div>
+      <div class='col col-2' data-label='Product Name'> {$row["product_name"]} </div>
+      <div class='col col-3' data-label='Price'>$ {$row["price"]} </div>
+    </li>
+    </ul>
+    </div>";
   }
 }
 
@@ -93,11 +108,11 @@ if ($result->num_rows > 0) {
 }
 $_SESSION['totalsum'] = $totalsum;
 
-echo "<tr>
-        <th align='right' colspan='2'>Total: </th>
-        <td align='right'><strong>$ {$totalsum}</strong></td>
-      </tr>
-      </table>";
+// echo "<tr>
+//         <th align='right' colspan='2'>Total: </th>
+//         <td align='right'><strong>$ {$totalsum}</strong></td>
+//       </tr>
+//       </table>";
 
 //function to clear cart
 if (isset($_GET['click'])) {
@@ -113,7 +128,7 @@ echo "<div class='btn-container'>
           <button type='button' class='button btn-pay'><a href='payment.php' class='btn-link'>Proceed to Payment</a></button>
         </div>
       </div>
-      </div>";
+    </div>";
 
 $dbcnx->close();
 ?>
