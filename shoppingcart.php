@@ -11,6 +11,7 @@ $userid = $_SESSION['valid_user'];
 $customerid = $_SESSION['customer_id'];
 
 if (!isset($userid)){
+  echo "<script>alert('Error, not logged in! Please login to make your purchase!');</script>";
   echo '<script>window.location.href = "authmain.php";</script>';
 }
 
@@ -50,7 +51,7 @@ if ($result->num_rows > 0) {
 $query3 = "INSERT INTO shoppingcart(`customer_id`, `product_id`, `product_brand`, `product_name`, `price`) VALUES ($user_id, $id, '$brand', '$name', $amount)";
 $result = $dbcnx->query($query3);
 
-// Query 4 - Selecting all product from a certain user's shopping cart to display
+// Query 4 - Selecting all product from a certain user's shopping cart to display in shopping cart page
 $query4 = 'select * from shoppingcart '
            ."where customer_id='$customerid' ";
 
@@ -83,6 +84,7 @@ if ($result->num_rows > 0) {
   }
 }
 
+// Query 5 - Select price & get total sum to display in shopping cart page
 $query5 = 'SELECT price FROM shoppingcart' . " WHERE customer_id = '$customerid'";
 $result = $dbcnx->query($query5);
 $totalsum = 0;
@@ -102,18 +104,31 @@ echo "<li class='table-row' style='background-color: #95A5A6;'>
     </ul>
   </div>";
 
-//function to clear cart
+//Query 6 - Function to clear cart after button is clicked
 if (isset($_GET['click'])) {
   $query6 = 'DELETE FROM shoppingcart' . " WHERE customer_id = '$customerid'";
   $result = $dbcnx->query($query6);
   unset($_GET['click']);
-  echo '<script> window.location.href = "shoppingcart.php" </script>';
+  echo '<script> window.location.href = "shoppingcart.php"; </script>';
+}
+
+//Query 7 - Function to check if cart is empty before proceeding to payment page
+if (isset($_GET['check'])) {
+  $query7 = 'Select * FROM shoppingcart' . " WHERE customer_id = '$customerid'";
+  $result = $dbcnx->query($query7);
+  if ($result->num_rows >0 ) {
+      echo '<script> window.location.href = "payment.php"; </script>';
+  }
+  //Alert error message if its empty
+  else {
+    echo "<script>alert('Error, your shopping cart is empty! Add items to continue!');</script>";
+  }
 }
 
 echo "<div class='btn-container'>
         <div class='btn-center'>
           <button type='button' class='button btn-clear'><a href='shoppingcart.php?click=true' class='btn-link'>Clear Cart</a></button>
-          <button type='button' class='button btn-pay'><a href='payment.php' class='btn-link'>Proceed to Payment</a></button>
+          <button type='button' class='button btn-pay'><a href='shoppingcart.php?check=true' class='btn-link'>Proceed to Payment</a></button>
         </div>
       </div>
     </div>";

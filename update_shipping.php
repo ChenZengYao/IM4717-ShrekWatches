@@ -24,18 +24,18 @@ $card_number = $_POST['card_number'];
 $card_expiry = $_POST['card_expiry'];
 $card_cvv = $_POST['card_cvv'];
 
-//insert into shippinginfo database table
+//Query 1 - Insert into shippinginfo database table (payment details)
 $query1 = "INSERT INTO shippinginfo (customer_id, name, email, tel, address, payment_type, card_number, card_expiry, card_cvv) VALUES ('".$customer_id."', '".$name."', '".$email."', '".$tel."', '".$address."'
   , '".$payment_type."', '".$card_number."', '".$card_expiry."', '".$card_cvv."')";
 $result = $dbcnx->query($query1);
 
-//Insert into puchaseditems database - To be used for tracking order history of users
+//Query 2 - Select all products details based on product_id (To be used for tracking order history of users)
 for ($x=0;$x<count($productsarray);$x++){
   $product_id=$productsarray[$x];
-  $query3 = 'select * from products '
+  $query2 = 'select * from products '
              ."where product_id='$product_id' ";
 
-  $result = $dbcnx->query($query3);
+  $result = $dbcnx->query($query2);
   if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
@@ -44,15 +44,15 @@ for ($x=0;$x<count($productsarray);$x++){
       $amount = $row["price"];
     }
   }
-
+  //Query 3 -Insert into puchaseditems database (To be used for tracking order history of users)
   $date = date('Y/m/d');
-  $query4 = "INSERT INTO purchaseditems (customer_id, product_id, date, product_brand, product_name, price) VALUES ('".$customer_id."', '".$product_id."', '".$date."', '".$brand."', '".$name."', '".$amount."')";
-  $result = $dbcnx->query($query4);
+  $query3 = "INSERT INTO purchaseditems (customer_id, product_id, date, product_brand, product_name, price) VALUES ('".$customer_id."', '".$product_id."', '".$date."', '".$brand."', '".$name."', '".$amount."')";
+  $result = $dbcnx->query($query3);
 }
 
-//Delete from shoppingcart database after payment made
-$query5 = 'DELETE FROM shoppingcart' . " WHERE customer_id = '$customer_id'";
-$result = $dbcnx->query($query5);
+//Query 4 - Delete from shoppingcart database after payment made
+$query4 = 'DELETE FROM shoppingcart' . " WHERE customer_id = '$customer_id'";
+$result = $dbcnx->query($query4);
 
 if (!$result)
 	echo "Your query failed.";
