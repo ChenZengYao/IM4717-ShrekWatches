@@ -1,0 +1,61 @@
+-- phpMyAdmin SQL Dump
+-- version 4.0.10deb1ubuntu0.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Nov 01, 2021 at 04:23 AM
+-- Server version: 5.5.62-0ubuntu0.14.04.1
+-- PHP Version: 5.5.9-1ubuntu4.29
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `f32ee`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products`
+--
+
+CREATE TABLE IF NOT EXISTS `products` (
+  `product_id` int(11) NOT NULL AUTO_INCREMENT,
+  `product_brand` varchar(100) NOT NULL,
+  `product_name` varchar(100) NOT NULL,
+  `price` double NOT NULL,
+  PRIMARY KEY (`product_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`product_id`, `product_brand`, `product_name`, `price`) VALUES
+(1, 'Casio G-Shock', 'CARBON CORE GA-2100-1ADR', 250),
+(2, 'Casio G-Shock', 'CARBON CORE GA-2110SU-3ADR', 200),
+(3, 'FOSSIL', 'ES4572', 300),
+(4, 'FOSSIL', 'ES3545', 300),
+(5, 'SEIKO', 'SRPD53K1', 200),
+(6, 'SEIKO', 'SRPD65K1', 250),
+(7, 'TISSOT', 'SEASTAR 1000 CHRONOGRAPH T1204173705100', 400),
+(8, 'TISSOT', 'TRADITION CHRONOGRAPH T0636173603700', 450),
+(9, 'TISSOT', 'SEASTAR 2000 PROFESSIONAL POWERMATIC 80 T1206071104100', 450),
+(10, 'FOSSIL', 'ES2830', 250),
+(11, 'CASIO G-SHOCK', 'CARBON CORE "CASIOAK" GA-2100-4ADR', 150),
+(12, 'TISSOT', 'SEASTAR 2000 PROFESSIONAL POWERMATIC 80 T1206071104101', 800),
+(13, 'FOSSIL', 'CH2600IE', 200),
+(14, 'SEIKO', 'LIMITED EDITION 6,500PCS GAARA "NARUTO SERIES" SRPF71K1', 350),
+(15, 'CASIO G-SHOCK', 'CARBON CORE "CASIOAK" GA-2100SU-1ADR', 150),
+(16, 'SEIKO', 'LIMITED EDITION 6,500PCS LEE "NARUTO SERIES" SRPF73K1', 300);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
